@@ -22,9 +22,9 @@ class MainActivity : AppCompatActivity() {
     private fun checkIfFillElements() {
         if(bindingMainActivity.passwordEditText.text.toString().isEmpty() ||
             bindingMainActivity.editTextTextEmailAddress.text.toString().isEmpty() ||
-                bindingMainActivity.editTextTextEmailAddress2.text.toString().isEmpty() ||
-                bindingMainActivity.editTextDate.text.toString().isEmpty() ||
-                bindingMainActivity.editTextTextEmailAddress3.text.toString().isEmpty()){
+            bindingMainActivity.editTextTextEmailAddress2.text.toString().isEmpty() ||
+            bindingMainActivity.editTextDate.text.toString().isEmpty() ||
+            bindingMainActivity.editTextTextEmailAddress3.text.toString().isEmpty()){
 
             bindingMainActivity.textView5.text = "Enter the information"
 
