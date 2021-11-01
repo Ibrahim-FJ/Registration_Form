@@ -28,22 +28,29 @@ class MainActivity : AppCompatActivity() {
 
             bindingMainActivity.textView5.text = "Enter the information"
 
-
-
         } else {
-
 
             if(bindingMainActivity.editTextTextEmailAddress.text.toString() != bindingMainActivity.editTextTextEmailAddress2.text.toString()){
                 bindingMainActivity.textView5.text = "Password doesn't match"
             }else{
-                var gender = when(bindingMainActivity.radioGroup.checkedRadioButtonId){
+
+                val gender = when(bindingMainActivity.radioGroup.checkedRadioButtonId){
                     R.id.male_radioBt -> "male"
                     R.id.female_radioBt -> "female"
 
                     else -> ""
                 }
-                bindingMainActivity.textView5.text = "Name: ${bindingMainActivity.passwordEditText.text.toString()}\n " +
-                        "Password: ${bindingMainActivity.editTextTextEmailAddress.text}\n Email: ${bindingMainActivity.editTextTextEmailAddress3.text}\nBirthday: ${bindingMainActivity.editTextDate.text}\nGender: ${gender}"
+
+                if(bindingMainActivity.editTextTextEmailAddress3.text.toString().contains("@") && bindingMainActivity.editTextTextEmailAddress3.text.toString().contains(".")){
+                    bindingMainActivity.textView5.text = "Name: ${bindingMainActivity.passwordEditText.text.toString()}\n " +
+                            "Password: ${bindingMainActivity.editTextTextEmailAddress.text}\n Email: " +
+                            "${bindingMainActivity.editTextTextEmailAddress3.text}\nBirthday: " +
+                            "${bindingMainActivity.editTextDate.text}\nGender: ${gender}"
+
+                }else{
+                    bindingMainActivity.textView5.text = "Email is not valid"
+
+                }
 
 
 
