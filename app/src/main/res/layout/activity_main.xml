@@ -10,6 +10,7 @@
         android:id="@+id/password_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Password"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +20,10 @@
         android:id="@+id/registration_form_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Registration Form"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="REGISTRATION FORM"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,6 +31,7 @@
         android:id="@+id/name_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/password_editText"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +41,8 @@
         android:id="@+id/password_editText"
         android:layout_width="240dp"
         android:layout_height="48dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toEndOf="@+id/name_textView"
         app:layout_constraintTop_toBottomOf="@+id/registration_form_textView"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -47,6 +51,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="reEnter password"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,35 +59,35 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
+        android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/password_editText"
-        app:layout_constraintTop_toBottomOf="@+id/password_editText"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress3"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
+        android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="@+id/password_editText"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="5dp"
         android:checkedButton="@id/male_radioBt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2">
 
         <RadioButton
@@ -95,13 +100,15 @@
             android:id="@+id/female_radioBt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Female" />
+            android:text="Female"
+            tools:layout_editor_absoluteY="48dp" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Gender"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,14 +116,13 @@
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="date"
         android:minHeight="48dp"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -124,6 +130,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Brithday"
         app:layout_constraintBottom_toBottomOf="@+id/editTextDate"
         app:layout_constraintStart_toStartOf="parent"
@@ -131,30 +138,33 @@
 
     <Button
         android:id="@+id/register_button"
-        android:layout_width="wrap_content"
+        android:layout_width="312dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
-        app:layout_constraintVertical_bias="0.374" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/register_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_button" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:text="Information" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:text="Email"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextEmailAddress3"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,16 +172,14 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress3"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        app:layout_constraintStart_toStartOf="@+id/password_editText"
+        app:layout_constraintTop_toBottomOf="@+id/password_editText"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
