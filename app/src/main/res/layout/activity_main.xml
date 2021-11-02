@@ -16,7 +16,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
-        android:text="REGISTRATION FORM"
+        android:text="@string/registration_form"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/password_editText1"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="55dp"
-        android:hint="Name"
+        android:hint="@string/name"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,20 +52,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:ems="10"
-        android:hint="reEnter the password"
+        android:hint="@string/reenter_the_password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress1"
-        tools:ignore="SpeakableTextPresentCheck">
+        tools:ignore="SpeakableTextPresentCheck"
+        app:endIconMode="password_toggle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextTextEmailAddress2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="-92dp"
-            tools:layout_editor_absoluteY="5dp" />
+            tools:layout_editor_absoluteY="6dp"
+            android:inputType="textPassword"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,9 +77,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="9dp"
 
-        android:hint="Gender"
+        android:layout_marginBottom="11dp"
+        android:hint="@string/gender"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,8 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
-            android:text="Gender"
-            tools:layout_editor_absoluteY="5dp" />
+            android:text="@string/gender"
+            tools:layout_editor_absoluteY="6dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
         android:ems="10"
-        android:hint="Brithday"
+        android:hint="@string/brithday"
         android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/textField"
@@ -114,7 +116,8 @@
             android:id="@+id/editTextDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="5dp" />
+            tools:layout_editor_absoluteY="6dp"
+            android:inputType="date"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,7 +128,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="36dp"
-        android:text="Register"
+        android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,20 +155,23 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_editText1"
         app:startIconDrawable="@drawable/ic_baseline_email_24"
-        tools:ignore="SpeakableTextPresentCheck">
+        tools:ignore="SpeakableTextPresentCheck"
+        app:errorEnabled="true"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextTextEmailAddress3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout_editor_absoluteY="5dp" />
+            tools:layout_editor_absoluteY="5dp"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -176,7 +182,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:hintAnimationEnabled="true"
@@ -185,13 +191,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_editText1"
         app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
-        tools:ignore="SpeakableTextPresentCheck">
+        tools:ignore="SpeakableTextPresentCheck"
+        app:endIconMode="password_toggle"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextTextEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="6dp" />
+            tools:layout_editor_absoluteY="5dp"
+            android:inputType="textPassword"/>
 
 
     </com.google.android.material.textfield.TextInputLayout>

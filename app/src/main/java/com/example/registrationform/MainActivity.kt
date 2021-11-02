@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.registrationform.databinding.ActivityMainBinding
+import com.google.android.material.datepicker.MaterialDatePicker
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +26,19 @@ class MainActivity : AppCompatActivity() {
             checkIfFillElements()
 
         }
+
+        bindingMainActivity.editTextDate.setOnClickListener {
+
+            val datePicker = MaterialDatePicker.Builder.datePicker()
+                    .setTitleText("Select date").setSelection(MaterialDatePicker.todayInUtcMilliseconds()).setInputMode(MaterialDatePicker.INPUT_MODE_TEXT)
+                    .build().show(supportFragmentManager, "tag")
+
+
+        }
+    }
+
+    private fun changeTheme() {
+        TODO("Not yet implemented")
     }
 
 
@@ -57,14 +71,12 @@ class MainActivity : AppCompatActivity() {
                             "${bindingMainActivity.editTextTextEmailAddress3.text}\nBirthday: " +
                             "${bindingMainActivity.editTextDate.text}\n$gender"
 
+
                 }else{
-                    bindingMainActivity.textView5.text = "Email is not valid"
+                    bindingMainActivity.editTextTextEmailAddress3.error = "Email is not valid"
+                   // bindingMainActivity.textView5.text = "Email is not valid"
 
                 }
-
-
-
-
 
 
             }

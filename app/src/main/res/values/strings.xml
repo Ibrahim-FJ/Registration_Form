@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Registration Form</string>
+    <string name="registration_form">REGISTRATION FORM</string>
+    <string name="reenter_the_password">reEnter the password</string>
+    <string name="gender">Gender</string>
+    <string name="brithday">Brithday</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
 
 </resources>
