@@ -2,6 +2,9 @@ package com.example.registrationform
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.registrationform.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +15,13 @@ class MainActivity : AppCompatActivity() {
         bindingMainActivity = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingMainActivity.root)
 
+
+
+       val items = listOf("Male", "Female")
+       val adapter = ArrayAdapter(this, R.layout.list_item, items)
+        bindingMainActivity.textFieldGender.setAdapter(adapter)
         bindingMainActivity.registerButton.setOnClickListener{
+
             checkIfFillElements()
 
         }
@@ -34,18 +43,19 @@ class MainActivity : AppCompatActivity() {
                 bindingMainActivity.textView5.text = "Password doesn't match"
             }else{
 
-                val gender = when(bindingMainActivity.radioGroup.checkedRadioButtonId){
-                    R.id.male_radioBt -> "male"
-                    R.id.female_radioBt -> "female"
-
-                    else -> ""
-                }
+//                val gender = when(bindingMainActivity.textFieldGender.){
+//                    R.id.male_radioBt -> "male"
+//                    R.id.female_radioBt -> "female"
+//
+//                    else -> ""
+//                }
+                val gender = bindingMainActivity.textFieldGender.text.toString()
 
                 if(bindingMainActivity.editTextTextEmailAddress3.text.toString().contains("@") && bindingMainActivity.editTextTextEmailAddress3.text.toString().contains(".")){
                     bindingMainActivity.textView5.text = "Name: ${bindingMainActivity.passwordEditText.text.toString()}\n " +
                             "Password: ${bindingMainActivity.editTextTextEmailAddress.text}\n Email: " +
                             "${bindingMainActivity.editTextTextEmailAddress3.text}\nBirthday: " +
-                            "${bindingMainActivity.editTextDate.text}\nGender: ${gender}"
+                            "${bindingMainActivity.editTextDate.text}\n$gender"
 
                 }else{
                     bindingMainActivity.textView5.text = "Email is not valid"
